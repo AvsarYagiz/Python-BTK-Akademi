@@ -42,5 +42,6 @@ while i < quantity:
 product_list = list(products.items())
 i = 0
 while i < quantity:
-    print(f'Product name: {product_list[i][0]}, Product price: {product_list[i][1]}')
+    name, value = list(products.keys())[i], list(products.values())[i]
+    print(f'Product name: {name}, Product price: {value}')
     i += 1
