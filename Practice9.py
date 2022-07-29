@@ -22,7 +22,7 @@ class Quiz:
         print(f'Question {self.questionIndex + 1}: {question.text}')
         for q in question.choice:
             print('-', q)
-        answer = str(input("Your answer: "))
+        answer = str(input('Your answer: '))
         self.guess(answer)
         self.loadQuestion()
 
@@ -35,12 +35,13 @@ class Quiz:
     def loadQuestion(self):
         if len(self.questions) == self.questionIndex:
             self.showScore()
+            self.displayProgress()
         else:
             self.displayProgress()
             self.displayQuestion()
 
     def showScore(self):
-        print(f'Your Score: {self.score}')
+        print('Your Score: ', self.score)
 
     def displayProgress(self):
         totalQuestion = len(self.questions)
@@ -52,7 +53,8 @@ class Quiz:
 
 
 q1 = Question('Which is the best programming language?', ['Python', 'C#', 'Java', 'JavaScript'], 'Python')
-q2 = Question('What is the most popular programming language?', ['Java', 'JavaScript', 'Python', 'C#'], 'JavaScript')
+q2 = Question('What is the most popular programming language?', ['Java', 'JavaScript', 'Python', 'C#'],
+              'JavaScript')
 q3 = Question('Which programming language is the most profitable?', ['Python', 'C#', 'Java', 'JavaScript'], 'Java')
 q4 = Question('Which is the easiest programming language?', ['Java', 'JavaScript', 'Python', 'C#'], 'Python')
 q5 = Question('What is the most used programming language?', ['Python', 'C#', 'Java', 'JavaScript'], 'JavaScript')
